@@ -30,7 +30,7 @@ The overall pipeline of **Hshbrwn** is pretty normal just with a few differences
      2. Then the object file is linked with all of its libraries.
      3. This file is now an executable and can be ran.
 
-### Basics/How to start
+## Basics/How to start
 
 First familiarize yourself with the hshcom command, not too hard though. You can use it like this "*hshcom -c myhshbrwnfile.hsb -o mycompiledhshbrwnfile.exe*" if output file name not specified defaults to the filename just with the .exe extension instead .hsb, and also you can use --compile instead of -c or --output instead of -o.
 
@@ -40,7 +40,7 @@ This language is strongly typed which is important to know so be careful with th
 
 Here is the structure of an if statement
 
-#### Stage 0
+### Stage 0
 
 #### Statements
 
@@ -67,7 +67,7 @@ for initialization; condition; {
 
 Probably should've done this first but data types.
 
-##### signed integers
+#### signed integers
 
 si8 8bitsignedinteger = 255;
 si16 16bitsignedinteger = -65,535;
@@ -75,13 +75,13 @@ si32 32bitsignedinteger = 4,294,967,295;
 si64 64bitsignedinteger = -18446744073709551615;
 si128 128bitsignedinteger = 170,141,183,460,469,231,731,687,303,715,884,105,727;
 
-###### unsigned integers
+#### unsigned integers
 
 ui8 8bitsunsignedinteger = 255;
 ...
 ui128 128bitsunsignedinteger = 170,141,183,460,469,231,731,687,303,715,884,105,727;
 
-####### other data types and operators
+#### other data types and operators
 
 str mystr = "Hello World!"
 
