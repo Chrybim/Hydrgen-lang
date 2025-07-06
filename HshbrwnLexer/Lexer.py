@@ -1,24 +1,56 @@
+from enum import *
 import re
 
-class Lexer():
-  def __init__(self):
-    self.keywords = {
-      "if": "IF",
-      "else": "ELSE",
-      "elsif": "ELSIF",
-      "for": "FOR",
-      "while": "WHILE",
-      "fn": "FUNCTION",
-      "ret": "RETURN", # might be changed.
-      "uint8": "UNSIGNEDINTEGER8BIT",
-      "uint16": "UNSIGNEDINTEGER16BIT",
-      "uint32": "UNSIGNEDINTEGER32BIT",
-      "uint64": "UNSIGNEDINTEGER64BIT",
-      "uint128": "UNSIGNEDINTEGER128BIT",
-      "hf": "HALF",
-      "f": "FLOAT",
-      "df": "DOUBLE"
-    }
-    self.operators = {
-      
-    }
+class TokenType(Enum):
+  IF = 0
+  ELSE = 1
+  ELSIF = 2
+  FOR = 3
+  WHILE = 4
+  UINT8 = 5
+  UINT16 = 6
+  UINT32 = 7
+  UINT64 = 8
+  UINT128 = 9
+  INT8 = 10
+  INT16 = 11
+  INT32 = 12
+  INT64 = 13
+  INT128 = 14
+  Hlf = 15
+  Fl = 16
+  Dfl = 17
+
+  # Operators
+  PLUS = 18
+  MINUS = 19
+  TIMES = 20
+  DIVIDE = 21
+  MODULO = 22
+  BITNAND = 23
+  BITAND = 24
+  BITOR = 25
+  BITXOR = 26
+  BITNOT = 27
+  BITNOR = 28
+  BITXNOR = 29
+  LOGNAD = 30
+  LOGAND = 31
+  LOGOR = 32
+  LOGXOR = 33
+  LOGNOT = 34
+  LOGNOR = 35
+  LOGXNOR = 36
+  CONCATENATE = 37
+
+  # Delimeters
+  LEFTPAREN = 38
+  RIGHTPAREN = 39
+  LEFTBRACE = 40
+  RIGHTBRACE = 41
+  LEFTBRACKET = 42
+  RIGHTBRACKET = 43
+  COLON = 44
+  SEMICOLON = 45
+  COMMA = 46
+  DOT = 47
